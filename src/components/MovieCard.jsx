@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const MovieCard = ({ movie }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -19,19 +19,21 @@ const MovieCard = ({ movie }) => {
       <h3>{movie.title}</h3>
 
       <div className="info">
-        <strong>Жанр: </strong>{movie.genre}
+        <strong>Жанр: </strong>
+        {movie.genre}
       </div>
 
-      <div className={`description ${isExpanded ? 'expanded' : ''}`}>
+      <div className={`description ${isExpanded ? "expanded" : ""}`}>
         {movie.description}
       </div>
 
       <button className="toggle-btn" onClick={toggleDescription}>
-        {isExpanded ? 'Менше' : 'Більше'}
+        {isExpanded ? "Менше" : "Більше"}
       </button>
 
       <div className="session-info">
-        <strong>Сеанс: </strong>{movie.dateTime}
+        <strong>Сеанс: </strong>
+        {movie.dateTime}
       </div>
 
       <button className="toggle-btn toggle-btn2" onClick={handleBooking}>
